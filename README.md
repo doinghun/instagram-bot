@@ -2,6 +2,8 @@
 
 This is a nodeJS instagram bot that uses [puppeteer](https://github.com/puppeteer/puppeteer) library to like 3 most recent photos of targeted tags.
 
+_Credit to this [tutorial](https://www.youtube.com/watch?v=jw4exv4qv2E&t=1889s)_
+
 ## Installation
 
 Clone this respository
