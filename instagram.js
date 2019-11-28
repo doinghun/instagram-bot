@@ -9,7 +9,7 @@ const instagram = {
 
   initialize: async () => {
     instagram.browser = await puppeteer.launch({
-      headless: false,
+      headless: true,
       args: ["--no-sandbox", "--disable-setuid-sandbox"]
     })
 
@@ -42,6 +42,7 @@ const instagram = {
 
     await loginButton[0].click()
     console.log("Logged In")
+
     await instagram.page.waitForNavigation({ waitUntil: "networkidle2" })
 
     let NotNowButton = await instagram.page.$x(
@@ -80,6 +81,7 @@ const instagram = {
 
         if (likeButton) {
           await likeButton.click()
+          console.log("Post Liked")
         }
         await instagram.page.waitFor(1000)
 
